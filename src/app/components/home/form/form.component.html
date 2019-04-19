@@ -3,8 +3,10 @@
   <div class="card-body">
     <form [formGroup]="form" class="lyt-grid">
       <div class="lyt-col-4">
-        <select formControlName="rule">
-          
+        <select formControlName="matching">
+          <ng-container *ngFor="let option of matchingOptions">
+            <option value="{{option.value}}">{{option.display}}</option>
+          </ng-container>
         </select>
       </div>
       <div class="lyt-col-8">

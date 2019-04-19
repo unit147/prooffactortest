@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Rule } from './form/form.model';
 
 @Component({
   selector: 'app-home',
@@ -10,8 +11,9 @@ export class HomeComponent implements OnInit {
 
   public baseFormTitle = 'Type a full or partial url where you would like to display notifications.';
   public excludeFormTitle = 'Type a full or partial url where you would like to NOT display notifications.';
+  public matchingOptions = [{display: 'Contains', value: 'contains'}, {display: 'Exact Match', value: 'exact'}];
 
-  public rules: { [key: string]: any } = {
+  public rules: { [key: string]: Rule[] } = {
     base: [],
     exclusion: [],
   };
@@ -19,6 +21,13 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  addForm( ruleType: string ): void {
+    this.rules[ruleType].push({
+      matching: 'contains',
+      url: ''
+    });
   }
 
 }
