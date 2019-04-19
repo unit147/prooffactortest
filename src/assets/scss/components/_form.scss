@@ -1,0 +1,13 @@
+.form{
+
+  input.ng-invalid.ng-dirty{
+    border-color: $color5;
+  }
+
+  &-error{
+    color: $color5;
+    padding: 11px 18px 10px;
+    background: $color4;
+    border-radius: 6px;
+  }
+}

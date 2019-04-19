@@ -8,6 +8,10 @@
     width: 100%;
     // max-width: 768px;
     // margin: 0 auto;
+
+    & + .lyt-container{
+      margin-top: $gap*1.5;
+    }
   }
 
   &-grid{
