@@ -7,11 +7,12 @@
                 [rule]="rule"
                 [index]="i"
                 [matchingOptions]="matchingOptions"
-                (remove)="removeRule($event, 'base')"></app-form>
+                (remove)="removeRule($event, 'base')"
+                @addRemove></app-form>
     </ng-container>
     <button (click)="addForm('base')"><i class="material-icons">add</i> new rule</button>
   </section>
-  
+
   <section class="lyt-container">  
     <h3>Exclusion Rules</h3>
     <ng-container *ngFor="let rule of rules.exclusion; let i = index">
@@ -19,7 +20,8 @@
                 [rule]="rule"
                 [index]="i"
                 [matchingOptions]="matchingOptions"
-                (remove)="removeRule($event, 'exclusion')"></app-form>
+                (remove)="removeRule($event, 'exclusion')"
+                @addRemove></app-form>
     </ng-container>
     <button (click)="addForm('exclusion')"><i class="material-icons">add</i> new rule</button>
   </section>
