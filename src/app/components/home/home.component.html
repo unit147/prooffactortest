@@ -1,0 +1,17 @@
+<main class="lyt-page">
+  
+  <section class="lyt-container">
+    <h3>Where would you like to display your campaign?</h3>
+    <ng-container *ngFor="let rule of rules.base">
+      <app-form [headerTitle]="baseFormTitle"></app-form>
+    </ng-container>
+    <button><i class="material-icons">add</i> new rule</button>
+  
+    <h3>Exclusion Rules</h3>
+    <ng-container *ngFor="let rule of rules.exclusion">
+      <app-form></app-form>
+    </ng-container>
+    <button><i class="material-icons">add</i> new rule</button>
+  </section>
+
+</main>

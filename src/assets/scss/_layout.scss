@@ -1,0 +1,25 @@
+.lyt{
+
+  &-page{
+    padding: $gap;
+  }
+
+  &-container{
+    width: 100%;
+    // max-width: 768px;
+    // margin: 0 auto;
+  }
+
+  &-grid{
+    display: flex;
+  }
+
+  &-col{ 
+    @for $i from 1 through 12{
+      &-#{$i}{
+        padding: $gap/2; 
+        width: 100% / 12 * $i;
+      }
+    }
+  }
+}

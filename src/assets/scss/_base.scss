@@ -1,0 +1,42 @@
+*,*:before,*:after{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: $fontFamily1;
+  margin: 0;
+}
+
+button{
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 11px 24px 10px;
+  background: $color1;
+  border: 2px solid $color2;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none !important;
+
+  &:hover{
+    background: $color2;
+  }
+}
+
+input[type=text],
+select{
+  width: 100%;
+  font-size: 16px;
+  padding: 9px 16px;
+  background: $color1;
+  border: 2px solid $color2;
+  border-radius: 6px;
+  outline: none !important;
+}
+
+button .material-icons{
+  font-size: 15px;
+  opacity: 0.4;
+  font-weight: 600;
+  vertical-align: middle;
+  margin-top: -3px;
+}

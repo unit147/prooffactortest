@@ -1,0 +1,28 @@
+.card{
+  border: 1px solid $color2;
+  border-radius: 6px;
+  background: $color1;
+  padding: 8px;
+  margin-bottom: $gap;
+  box-shadow: 2px 2px 0 rgba($color2, .3);
+  
+  &-header{
+    position: relative;
+    padding: $gap/2;
+    font-size: 14px;
+    color: $color3;
+  }
+
+  &-close{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    font-weight: normal;
+    opacity: 0.7;
+  }
+  
+  &-body{
+    padding: 8px;
+  }
+}
