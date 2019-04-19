@@ -1,7 +1,7 @@
 <div class="card">
-  <div class="card-header">{{headerTitle}}<i class="material-icons card-close">highlight_off</i></div>
+  <div class="card-header">{{headerTitle}}<i class="material-icons card-close" (click)="removeClick()">highlight_off</i></div>
   <div class="card-body">
-    <form [formGroup]="form" class="lyt-grid">
+    <form [formGroup]="form" class="form lyt-grid">
       <div class="lyt-col-4">
         <select formControlName="matching">
           <ng-container *ngFor="let option of matchingOptions">
@@ -10,7 +10,8 @@
         </select>
       </div>
       <div class="lyt-col-8">
-        <input formControlName="url" type="text">
+        <input formControlName="url" type="text" placeholder="Display URL">
+        <div *ngIf="url.invalid && (url.dirty || url.touched)" class="form-error">URL is Missing</div>
       </div>
     </form>
   </div>

@@ -30,4 +30,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  removeRule( index: number, path: string ): void {
+    this.rules[path].splice(index, 1);
+  }
 }

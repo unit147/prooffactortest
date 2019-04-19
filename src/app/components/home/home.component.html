@@ -2,20 +2,25 @@
   
   <section class="lyt-container">
     <h3>Where would you like to display your campaign?</h3>
-    <ng-container *ngFor="let rule of rules.base">
+    <ng-container *ngFor="let rule of rules.base; let i = index">
       <app-form [headerTitle]="baseFormTitle"
                 [rule]="rule"
-                [matchingOptions]="matchingOptions"></app-form>
+                [index]="i"
+                [matchingOptions]="matchingOptions"
+                (remove)="removeRule($event, 'base')"></app-form>
     </ng-container>
     <button (click)="addForm('base')"><i class="material-icons">add</i> new rule</button>
+  </section>
   
+  <section class="lyt-container">  
     <h3>Exclusion Rules</h3>
-    <ng-container *ngFor="let rule of rules.exclusion">
+    <ng-container *ngFor="let rule of rules.exclusion; let i = index">
       <app-form [headerTitle]="excludeFormTitle"
                 [rule]="rule"
-                [matchingOptions]="matchingOptions"></app-form>
+                [index]="i"
+                [matchingOptions]="matchingOptions"
+                (remove)="removeRule($event, 'exclusion')"></app-form>
     </ng-container>
     <button (click)="addForm('exclusion')"><i class="material-icons">add</i> new rule</button>
   </section>
-
 </main>
